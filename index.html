@@ -64,21 +64,19 @@
         
         /* Header */
         header {
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 0, 31, 0.9);
+            background: rgba(10, 0, 31, 0.95);
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
         
         header.scrolled {
-            padding: 0.8rem 2rem;
-            background: rgba(10, 0, 31, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            padding: 0.7rem 2rem;
         }
         
         .header-container {
@@ -89,23 +87,27 @@
             margin: 0 auto;
         }
         
-        .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 900;
             background: linear-gradient(45deg, var(--electric-blue), var(--neon-pink));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            font-size: 2.5rem;
-            filter: drop-shadow(0 0 10px var(--electric-blue));
         }
         
         /* Desktop Nav */
@@ -116,14 +118,14 @@
         .desktop-nav ul {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
         
         .desktop-nav a {
             color: var(--white);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
             position: relative;
             padding: 0.5rem 0;
@@ -137,11 +139,11 @@
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
+            height: 2px;
             bottom: 0;
             left: 0;
             background: linear-gradient(90deg, var(--electric-blue), var(--neon-pink));
-            transition: width 0.4s ease;
+            transition: width 0.3s ease;
             border-radius: 10px;
         }
         
@@ -155,7 +157,7 @@
             background: none;
             border: none;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
             z-index: 1001;
         }
@@ -170,8 +172,8 @@
             background: rgba(10, 0, 31, 0.98);
             backdrop-filter: blur(15px);
             z-index: 1001;
-            transition: right 0.4s ease;
-            padding: 2rem;
+            transition: right 0.3s ease;
+            padding: 1.5rem;
             box-shadow: -5px 0 25px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
@@ -187,34 +189,34 @@
         }
         
         .mobile-nav li {
-            margin: 1.5rem 0;
+            margin: 1.2rem 0;
         }
         
         .mobile-nav a {
             color: var(--white);
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             display: block;
             padding: 0.5rem 1rem;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
         
         .mobile-nav a:hover {
             color: var(--electric-blue);
             background: rgba(255, 255, 255, 0.05);
-            transform: translateX(10px);
+            transform: translateX(8px);
         }
         
         .close-menu {
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
+            top: 1.2rem;
+            right: 1.2rem;
             background: none;
             border: none;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
         }
         
@@ -222,20 +224,20 @@
             background: linear-gradient(45deg, var(--electric-blue), var(--neon-pink));
             color: var(--deep-space);
             border: none;
-            padding: 0.8rem 1.8rem;
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
             position: relative;
             overflow: hidden;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 25px rgba(255, 0, 255, 0.7);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255, 0, 255, 0.6);
         }
         
         .cta-button::before {
@@ -246,19 +248,19 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: 0.5s;
+            transition: 0.4s;
         }
         
         .cta-button:hover::before {
             left: 100%;
         }
         
-        /* Hero Section */
+        /* Hero Section - Fixed Spacing */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 0 2rem;
+            padding: 5rem 2rem 2rem;
             position: relative;
             overflow: hidden;
         }
@@ -268,39 +270,39 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
             position: relative;
             z-index: 2;
         }
         
         .hero-content {
-            padding-top: 5rem;
+            padding-top: 1rem;
         }
         
         .hero h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 4.5rem;
+            font-size: 3.2rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             background: linear-gradient(45deg, var(--electric-blue), var(--neon-pink), var(--lime-green));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+            text-shadow: 0 0 25px rgba(0, 245, 255, 0.3);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.8);
         }
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
         
@@ -308,18 +310,18 @@
             background: transparent;
             color: var(--white);
             border: 2px solid var(--electric-blue);
-            padding: 0.8rem 1.8rem;
+            padding: 0.7rem 1.5rem;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+            box-shadow: 0 0 12px rgba(0, 245, 255, 0.2);
         }
         
         .secondary-button:hover {
             background: rgba(0, 245, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
         }
         
         .hero-image {
@@ -332,49 +334,50 @@
         .product-showcase {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
             width: 100%;
         }
         
         .showcase-item {
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             position: relative;
         }
         
         .showcase-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
         
         .product-image-container {
-            height: 300px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             position: relative;
         }
         
         .product-image-container img {
             max-height: 100%;
             max-width: 100%;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-            transition: all 0.4s ease;
+            filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+            transition: all 0.3s ease;
         }
         
         .showcase-item:hover .product-image-container img {
             transform: scale(1.05);
-            filter: drop-shadow(0 15px 25px rgba(0, 245, 255, 0.3));
+            filter: drop-shadow(0 12px 20px rgba(0, 245, 255, 0.3));
         }
         
         .showcase-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
             color: var(--white);
         }
         
         .showcase-item p {
             color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
         }
         
         .floating-gummies {
@@ -385,11 +388,11 @@
         
         .gummy {
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50% 50% 50% 10%;
             animation: gummy-float 8s infinite ease-in-out;
-            filter: drop-shadow(0 0 5px rgba(255, 234, 0, 0.7));
+            filter: drop-shadow(0 0 4px rgba(255, 234, 0, 0.7));
         }
         
         .gummy-1 {
@@ -422,35 +425,35 @@
         
         @keyframes gummy-float {
             0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(180deg); }
+            50% { transform: translateY(-25px) rotate(180deg); }
             100% { transform: translateY(0) rotate(360deg); }
         }
         
-        /* Products Section */
+        /* Products Section - Reduced Spacing */
         .products {
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
         .section-title h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             background: linear-gradient(45deg, var(--lime-green), var(--sun-yellow));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 20px rgba(128, 255, 0, 0.3);
+            text-shadow: 0 0 15px rgba(128, 255, 0, 0.3);
         }
         
         .section-title p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
             color: rgba(255, 255, 255, 0.7);
@@ -458,91 +461,92 @@
         
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1400px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .product-card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
         }
         
         .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 30px rgba(157, 78, 221, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(157, 78, 221, 0.25);
             border-color: var(--vibrant-purple);
         }
         
         .product-image {
-            height: 250px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding: 1.5rem;
+            padding: 1.2rem;
         }
         
         .product-image img {
             max-height: 100%;
             max-width: 100%;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
         
         .product-card:hover .product-image img {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
         
         .product-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 12px;
+            right: 12px;
             background: var(--electric-blue);
             color: var(--deep-space);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
             font-weight: 700;
-            box-shadow: 0 0 10px var(--electric-blue);
+            box-shadow: 0 0 8px var(--electric-blue);
             z-index: 2;
         }
         
         .product-content {
-            padding: 1.5rem;
+            padding: 1.2rem;
         }
         
         .product-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
             color: var(--white);
         }
         
         .product-content p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.5;
+            font-size: 0.9rem;
         }
         
         .product-flavors {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            gap: 0.4rem;
+            margin-bottom: 1.2rem;
         }
         
         .flavor {
             background: rgba(0, 245, 255, 0.2);
             color: var(--electric-blue);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
             border: 1px solid var(--electric-blue);
         }
@@ -554,34 +558,34 @@
         }
         
         .price {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--lime-green);
-            text-shadow: 0 0 10px rgba(128, 255, 0, 0.5);
+            text-shadow: 0 0 8px rgba(128, 255, 0, 0.5);
         }
         
-        /* Energy Burst Section */
+        /* Energy Burst Section - Reduced Spacing */
         .energy-burst {
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             background: radial-gradient(circle at center, rgba(157, 78, 221, 0.2) 0%, transparent 70%);
             position: relative;
             overflow: hidden;
         }
         
         .energy-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
         
         .energy-content h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             background: linear-gradient(45deg, var(--neon-pink), var(--electric-blue));
             -webkit-background-clip: text;
             background-clip: text;
@@ -589,8 +593,8 @@
         }
         
         .energy-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.8);
         }
@@ -598,13 +602,13 @@
         .energy-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
         
         .energy-item {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 1.5rem;
+            border-radius: 12px;
+            padding: 1.2rem;
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid transparent;
@@ -612,25 +616,30 @@
         
         .energy-item:hover {
             border-color: var(--lime-green);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(128, 255, 0, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(128, 255, 0, 0.15);
         }
         
         .energy-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
             color: var(--lime-green);
         }
         
         .energy-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
             color: var(--white);
         }
         
-        /* CTA Section */
+        .energy-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section - Reduced Spacing */
         .cta-section {
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
             position: relative;
@@ -638,7 +647,7 @@
         }
         
         .cta-container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
@@ -646,9 +655,9 @@
         
         .cta-section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             background: linear-gradient(45deg, var(--electric-blue), var(--neon-pink), var(--lime-green));
             -webkit-background-clip: text;
             background-clip: text;
@@ -656,22 +665,23 @@
         }
         
         .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
         }
         
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
         
-        /* Premium Footer */
+        /* Premium Footer - Reduced Spacing */
         footer {
             background: linear-gradient(to bottom, var(--dark-purple), #0a001f);
-            padding: 5rem 2rem 2rem;
+            padding: 4rem 2rem 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
@@ -690,7 +700,7 @@
             position: relative;
             display: block;
             width: calc(100% + 1.3px);
-            height: 50px;
+            height: 40px;
         }
         
         .footer-wave .shape-fill {
@@ -698,24 +708,25 @@
         }
         
         .footer-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
+            gap: 2.5rem;
         }
         
         .footer-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
             color: var(--electric-blue);
             font-weight: 700;
         }
         
         .footer-column p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.6;
+            font-size: 0.9rem;
         }
         
         .footer-column ul {
@@ -723,7 +734,7 @@
         }
         
         .footer-column li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
         
         .footer-column a {
@@ -732,31 +743,33 @@
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
+            font-size: 0.9rem;
         }
         
         .footer-column a:hover {
             color: var(--electric-blue);
-            padding-left: 5px;
+            padding-left: 4px;
         }
         
         .footer-column a i {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
         
         .newsletter-form {
             display: flex;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
         
         .newsletter-input {
             flex: 1;
-            padding: 0.8rem 1rem;
+            padding: 0.7rem 1rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.05);
             border-radius: 5px 0 0 5px;
             color: var(--white);
             font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
         }
         
         .newsletter-input:focus {
@@ -768,11 +781,12 @@
             background: var(--electric-blue);
             color: var(--deep-space);
             border: none;
-            padding: 0 1.2rem;
+            padding: 0 1rem;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
         .newsletter-button:hover {
@@ -781,55 +795,60 @@
         
         .social-icons {
             display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
         }
         
         .social-icons a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transition: all 0.3s ease;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--white);
         }
         
         .social-icons a:hover {
             background: var(--electric-blue);
             color: var(--deep-space);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
         
         .payment-methods {
             display: flex;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
+            gap: 0.6rem;
+            margin-top: 1.2rem;
             flex-wrap: wrap;
         }
         
         .payment-method {
-            width: 50px;
+            width: 45px;
             height: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.7);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .payment-method img {
+            max-width: 80%;
+            max-height: 80%;
+            filter: brightness(0) invert(1);
         }
         
         .copyright {
             text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         /* Mobile Styles */
@@ -846,6 +865,10 @@
                 display: none;
             }
             
+            .hero {
+                padding: 4rem 1.5rem 1.5rem;
+            }
+            
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -853,7 +876,7 @@
             }
             
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.2rem;
             }
             
             .hero-buttons {
@@ -866,11 +889,19 @@
             }
             
             .section-title h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+            
+            .products {
+                padding: 3rem 1.5rem;
             }
             
             .products-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .energy-burst {
+                padding: 3rem 1.5rem;
             }
             
             .energy-container {
@@ -881,13 +912,21 @@
                 grid-template-columns: 1fr;
             }
             
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            
             .cta-section h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            footer {
+                padding: 3rem 1.5rem 1rem;
             }
             
             .footer-container {
@@ -903,9 +942,10 @@
     <!-- Header -->
     <header id="header">
         <div class="header-container">
-            <div class="logo">
-                <i class="fas fa-bolt"></i>
-                UKSUPS
+            <div class="logo-container">
+                <!-- Replace with your logo image -->
+                <img src="./images/logo.png" alt="UKSUPS Logo" class="logo-img">
+                <div class="logo-text">UKSUPS</div>
             </div>
             
             <!-- Desktop Navigation -->
@@ -941,7 +981,7 @@
                 <li><a href="#energy">Energy Boost</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="cta-button" style="display: block; text-align: center; margin-top: 1rem;">Shop Now</a></li>
+                <li><a href="#" class="cta-button" style="display: block; text-align: center; margin-top: 0.8rem;">Shop Now</a></li>
             </ul>
         </nav>
     </header>
@@ -961,20 +1001,16 @@
                 <div class="product-showcase">
                     <div class="showcase-item">
                         <div class="product-image-container">
-                            <!-- Replace with your image path -->
-                            <div style="width: 200px; height: 200px; background: linear-gradient(45deg, var(--electric-blue), var(--neon-pink)); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-                                BLUE RASPBERRY
-                            </div>
+                            <!-- Replace with your product image -->
+                            <img src="./images/blue-raspberry.png" alt="Blue Raspberry Protein Energy Drink">
                         </div>
                         <h3>Blue Raspberry</h3>
                         <p>Protein Energy Drink</p>
                     </div>
                     <div class="showcase-item">
                         <div class="product-image-container">
-                            <!-- Replace with your image path -->
-                            <div style="width: 200px; height: 200px; background: linear-gradient(45deg, var(--lime-green), var(--sun-yellow)); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-                                CREATINE GUMMIES
-                            </div>
+                            <!-- Replace with your product image -->
+                            <img src="./images/creatine-gummies.png" alt="Creatine Gummies">
                         </div>
                         <h3>Creatine Gummies</h3>
                         <p>Mixed Fruit Flavors</p>
@@ -999,8 +1035,8 @@
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Replace with your image path -->
-                    <div style="width: 180px; height: 180px; background: linear-gradient(45deg, var(--electric-blue), var(--vibrant-purple)); border-radius: 15px;"></div>
+                    <!-- Replace with your product image -->
+                    <img src="./images/blue-raspberry.png" alt="Blue Raspberry Protein Energy Drink">
                     <div class="product-badge">BESTSELLER</div>
                 </div>
                 <div class="product-content">
@@ -1019,8 +1055,8 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Replace with your image path -->
-                    <div style="width: 180px; height: 180px; background: linear-gradient(45deg, var(--sun-yellow), var(--neon-pink)); border-radius: 15px;"></div>
+                    <!-- Replace with your product image -->
+                    <img src="./images/tropical-punch.png" alt="Tropical Protein Energy Drink">
                     <div class="product-badge">NEW</div>
                 </div>
                 <div class="product-content">
@@ -1039,8 +1075,8 @@
             
             <div class="product-card">
                 <div class="product-image">
-                    <!-- Replace with your image path -->
-                    <div style="width: 180px; height: 180px; background: linear-gradient(45deg, var(--lime-green), var(--electric-blue)); border-radius: 15px;"></div>
+                    <!-- Replace with your product image -->
+                    <img src="./images/creatine-gummies.png" alt="Creatine Gummies">
                     <div class="product-badge">VARIETY</div>
                 </div>
                 <div class="product-content">
@@ -1168,10 +1204,22 @@
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Store Locator</a></li>
                 </ul>
                 <div class="payment-methods">
-                    <div class="payment-method">Visa</div>
-                    <div class="payment-method">MC</div>
-                    <div class="payment-method">PayPal</div>
-                    <div class="payment-method">Apple Pay</div>
+                    <div class="payment-method">
+                        <!-- Replace with your payment icon -->
+                        <img src="./images/visa.png" alt="Visa">
+                    </div>
+                    <div class="payment-method">
+                        <!-- Replace with your payment icon -->
+                        <img src="./images/mastercard.png" alt="Mastercard">
+                    </div>
+                    <div class="payment-method">
+                        <!-- Replace with your payment icon -->
+                        <img src="./images/paypal.png" alt="PayPal">
+                    </div>
+                    <div class="payment-method">
+                        <!-- Replace with your payment icon -->
+                        <img src="./images/apple-pay.png" alt="Apple Pay">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1215,12 +1263,12 @@
         // Create animated background shapes
         document.addEventListener('DOMContentLoaded', function() {
             const animatedBg = document.getElementById('animatedBg');
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 12; i++) {
                 const shape = document.createElement('div');
                 shape.classList.add('floating-shape');
                 
                 // Random size
-                const size = Math.random() * 100 + 50;
+                const size = Math.random() * 80 + 40;
                 shape.style.width = `${size}px`;
                 shape.style.height = `${size}px`;
                 
@@ -1229,7 +1277,7 @@
                 shape.style.left = `${Math.random() * 100}%`;
                 
                 // Random animation duration
-                const duration = Math.random() * 30 + 20;
+                const duration = Math.random() * 25 + 15;
                 shape.style.animationDuration = `${duration}s`;
                 
                 animatedBg.appendChild(shape);
