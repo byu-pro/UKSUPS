@@ -255,12 +255,12 @@
             left: 100%;
         }
         
-        /* Hero Section - Fixed Mobile Spacing */
+        /* Hero Section - Fixed Spacing */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 4.5rem 1.5rem 1.5rem;
+            padding: 5rem 1.5rem 1rem;
             position: relative;
             overflow: hidden;
         }
@@ -431,13 +431,13 @@
         
         /* Products Section - Reduced Spacing */
         .products {
-            padding: 3.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             position: relative;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         
         .section-title h2 {
@@ -566,7 +566,7 @@
         
         /* Energy Burst Section - Reduced Spacing */
         .energy-burst {
-            padding: 3.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             background: radial-gradient(circle at center, rgba(157, 78, 221, 0.2) 0%, transparent 70%);
             position: relative;
             overflow: hidden;
@@ -577,7 +577,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: center;
         }
         
@@ -639,7 +639,7 @@
         
         /* CTA Section - Reduced Spacing */
         .cta-section {
-            padding: 3.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
             position: relative;
@@ -681,7 +681,7 @@
         /* Premium Footer - Reduced Spacing */
         footer {
             background: linear-gradient(to bottom, var(--dark-purple), #0a001f);
-            padding: 3rem 1.5rem 1rem;
+            padding: 2.5rem 1.5rem 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
@@ -844,7 +844,7 @@
         
         .copyright {
             text-align: center;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             padding-top: 1.2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
@@ -865,9 +865,10 @@
                 display: none;
             }
             
-            /* Fixed Mobile Hero Spacing */
+            /* Fixed Mobile Hero Spacing - Increased padding */
             .hero {
-                padding: 5rem 1rem 1rem;
+                padding: 6rem 1rem 1rem;
+                min-height: 85vh;
             }
             
             .hero-container {
@@ -894,7 +895,7 @@
             }
             
             .products {
-                padding: 2.5rem 1rem;
+                padding: 1.5rem 1rem;
             }
             
             .products-grid {
@@ -902,7 +903,7 @@
             }
             
             .energy-burst {
-                padding: 2.5rem 1rem;
+                padding: 1.5rem 1rem;
             }
             
             .energy-container {
@@ -914,7 +915,7 @@
             }
             
             .cta-section {
-                padding: 2.5rem 1rem;
+                padding: 1.5rem 1rem;
             }
             
             .cta-section h2 {
@@ -927,11 +928,23 @@
             }
             
             footer {
-                padding: 2.5rem 1rem 1rem;
+                padding: 2rem 1rem 1rem;
             }
             
             .footer-container {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Desktop specific spacing fixes */
+        @media (min-width: 769px) {
+            .hero {
+                padding: 6rem 1.5rem 1rem;
+                min-height: 85vh;
+            }
+            
+            .products {
+                padding: 1.5rem 1.5rem;
             }
         }
     </style>
